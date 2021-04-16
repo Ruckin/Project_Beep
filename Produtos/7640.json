@@ -1,0 +1,16 @@
+{
+    "Produto": "INV-9610-01",
+    "CodProduto": "7640",
+    "Gravador": "ST-LINK/V2",
+    "Micro":"STM8S003F3",
+    "Img_Gravador": "ST Link V2 ISOL.png",
+    "BsGravacao":"NA",
+    "SupGravacao":"NA",
+    "Rastreamento": "true",
+    "Tst_State": {
+        "1":"SetupInicial",
+        "2":"ScamGravador",
+        "3":"StartRastreamento",
+        "4":"GravaFirmware"
+    }
+}

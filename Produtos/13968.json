@@ -1,0 +1,15 @@
+{
+    "Produto": "INV-TC1-01-H-R",
+    "CodProduto": "13968",
+    "Gravador": "Renesas E2 Lite",
+    "Img_Gravador": "Renesas E2 Lite.png",
+    "BsGravacao":"BGR-001",
+    "SupGravacao":"SGR-004",
+    "Rastreamento": "true",
+    "Tst_State": {
+        "1":"SetupInicial",
+        "2":"ScamGravador",
+        "3":"StartRastreamento",
+        "4":"GravaFirmware"
+    }
+}

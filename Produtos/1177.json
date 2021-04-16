@@ -1,0 +1,16 @@
+{
+    "Produto": "INV-15701",
+    "CodProduto": "1177",
+    "Gravador": "ST-LINK/V2",
+    "Img_Gravador": "ST Link V2 ISOL.png",
+    "Rastreamento": "true",
+    "BsGravacao":"NA",
+    "SupGravacao":"NA",
+    "Micro":"STM8S003F3",
+    "Tst_State": {
+        "1":"SetupInicial",
+        "2":"ScamGravador",
+        "3":"StartRastreamento",
+        "4":"GravaFirmware"
+    }
+}

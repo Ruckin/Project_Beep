@@ -1,0 +1,15 @@
+{
+    "Produto": "INV-YB1-11C-J-H",
+    "CodProduto": "16202",
+    "Gravador": "Renesas E2 Lite",
+    "Img_Gravador": "Renesas E2 Lite.png",
+    "BsGravacao":"BGR-001",
+    "SupGravacao":"SGR-001",
+    "Rastreamento": "true",
+    "Tst_State": {
+        "1":"SetupInicial",
+        "2":"ScamGravador",
+        "3":"StartRastreamento",
+        "4":"GravaFirmware"
+    }
+}
