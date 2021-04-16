@@ -1,0 +1,144 @@
+    // /**
+    // * HERE START's THE RECORDING WITH THE PERMISSION
+    // */
+    //startRecording(){
+    //     console.log("STARTING RECORDING...");
+    //     navigator.mediaDevices.getUserMedia({ audio: true })
+    //     .then(stream => {
+    //         this.mediaRecorder = new MediaRecorder(stream);
+    //         this.mediaRecorder.start();
+    //         const audioChunks = [];
+
+    //         this.mediaRecorder.addEventListener("dataavailable", event => {
+    //             audioChunks.push(event.data);
+    //         });
+    //         console.log("RECORDING");
+    //     });
+    //}
+
+    // /**
+    //  * HERE STOP's THE RECORDING AFTER 1 SECOND FROM THE COMMAND
+    //  */
+    // stopRecording(){
+    //     console.log("STOPING THE RECORDING....");
+    //     setTimeout(() => {
+    //         this.mediaRecorder.stop();
+    //     }, 1000);
+    //     console.log("RECORD STOPED!");
+    // }
+
+    /**
+     * THIS FUNCTION CONVERT THE TYPE BLOB AUDIO FILE TO A FILE .mp3 TYPE
+     */
+    // convertingBlobToMp3(){
+    //     console.log("CINVERTING...");
+    //     var file = {};
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open('GET', blobURL, true);
+    //     xhr.responseType = 'blob';
+    //     xhr.onload = function(e) {
+    //         if (this.status == 200) {
+    //             file.file = this.response;
+    //             file.name = "Beep_Recording.mp3";
+    //             file.size = getYourBlobSize();
+    //             file.type = "audio/mpeg";
+    //             uploadAudioBlobs(file);
+    //         }
+    //     };
+    //     console.log("CONVERTED!");
+    //     xhr.send();
+    //     console.log("SENDING!");
+    // }
+
+    /**
+     * THIS FUNCTION IS FOR PLAYING THE RECORDING
+     */
+    // playingRecording(){
+    //     const source = this.audioContext.createBufferSource();
+    //     source.buffer = this.mediaRecorder;
+    //     source.connect(this.audioContext.destination);
+    //     source.start(0);
+    // }
+
+
+    // permissionRecording(){        
+    //     navigator.mediaDevices.getUserMedia({ audio: true })
+    //         .then(stream => {
+    //             const mediaRecorder = new MediaRecorder(stream);
+    //             mediaRecorder.start();
+
+    //             /*START THE RECORDING*/
+    //             const audioChunks = [];
+
+    //             mediaRecorder.addEventListener("dataavailable", event => {
+    //             audioChunks.push(event.data);
+    //             });
+
+    //             /*
+    //             HERE WE ANALYZE A SPECIFIC FREQUENCY 
+    //             A SPECIFIC MAGNITUDE 
+    //             AND THE TIME DURATION OF THIS SOUND
+    //             */
+    //             var analyser = this.CONTEXT.createAnalyser();
+    //             console.log("AQUI!!!")
+    //             analyser.fftSize = 2048;
+
+    //             var bufferLength = analyser.frequencyBinCount;
+    //             var dataArray = new Uint8Array(bufferLength);
+    //             analyser.getByteTimeDomainData(dataArray);
+
+    //             /*CONNECT THE SOURCE OF SOUND TO BE ANALYSED*/ 
+    //             //mediaRecorder.connect(analyser);
+
+    //             //GET A CANVAS DEFINED WITH ID "OSCILLOSCOPE" 
+    //             var canvas = document.getElementById("oscilloscope");
+    //             //var canvasCtx = canvas.getContext("2d");
+  
+    //             //draw();
+    //            //this.buzzerStatus = True;
+
+    //             /*STOP THE RECORDING USING TIMEOUT OF 10seconds*/
+    //             setTimeout(() => {
+    //                 mediaRecorder.stop();
+    //             }, 1000);                
+
+    //         });
+    //     console.log('getUserMedia supported.');
+    //     console.log(this.buzzerStatus);
+    // }
+    /*    THIS METHOD IS FOR INITIALIZE THE RECORDING
+    */
+
+    /*THIS METHOD DRAWS A OSCILLOSCOPE TO SEE THE SIGNAL
+    */
+    // draw() {
+
+    //     requestAnimationFrame(draw);
+      
+    //     analyser.getByteTimeDomainData(dataArray);
+      
+    //     canvasCtx.fillStyle = "rgb(200, 200, 200)";
+    //     canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+      
+    //     canvasCtx.lineWidth = 2;
+    //     canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+      
+    //     canvasCtx.beginPath();
+      
+    //     var sliceWidth = canvas.width * 1.0 / bufferLength;
+    //     var x = 0;
+      
+    //     for (var i = 0; i < bufferLength; i++) {
+
+    //         var v = dataArray[i] / 128.0;
+    //         var y = v * canvas.height / 2;   
+
+    //         if (i === 0) {
+    //             canvasCtx.moveTo(x, y);
+    //         } else {
+    //             canvasCtx.lineTo(x, y);
+    //         }      
+    //         x += sliceWidth;
+    //     }
+    //     canvasCtx.lineTo(canvas.width, canvas.height / 2);
+    //     canvasCtx.stroke();
